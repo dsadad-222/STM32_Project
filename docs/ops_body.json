@@ -1,0 +1,41 @@
+[
+ {
+  "tool": "doc_replace_text",
+  "args": {
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx",
+   "ranges": [
+    {
+     "begin": 229,
+     "end": 241
+    }
+   ],
+   "text": "本工程为嵌入式培训课程串口章节的实践任务。上位机通过串口助手按自定义协议下发数据帧，下位机解析后控制左转向灯、右转向灯、蜂鸣器与 LED 灯，并把需要掉电保存的内容写入片内 Flash。"
+  }
+ },
+ {
+  "tool": "doc_replace_text",
+  "args": {
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx",
+   "ranges": [
+    {
+     "begin": 217,
+     "end": 225
+    }
+   ],
+   "text": "本文档适用于基于 STM32F103ZET6 与 STM32F10x 标准外设库 V3.6 的串口数据控制测试工程，覆盖基础要求（串口下发命令控制板载外设）以及两项进阶要求（串口下发文本实时显示到 OLED、内容写入内部 Flash 掉电保存并在下次上电自动恢复）。"
+  }
+ },
+ {
+  "tool": "doc_replace_text",
+  "args": {
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx",
+   "ranges": [
+    {
+     "begin": 211,
+     "end": 213
+    }
+   ],
+   "text": "本文档用于说明串口数据控制测试工程的模块划分、对外接口与使用方法，作为开发、调试与验收的统一依据。"
+  }
+ }
+]

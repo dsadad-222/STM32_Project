@@ -1,0 +1,204 @@
+[
+ {
+  "tool": "doc_replace_text",
+  "args": {
+   "ranges": [
+    {
+     "begin": 0,
+     "end": 4
+    }
+   ],
+   "text": "串口数据控制测试方案文档（接口）",
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx"
+  }
+ },
+ {
+  "tool": "doc_replace_text",
+  "args": {
+   "ranges": [
+    {
+     "begin": 195,
+     "end": 197
+    }
+   ],
+   "text": "本文档用于说明串口数据控制测试工程的模块划分、对外接口与使用方法，作为开发、调试与验收的统一依据。",
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx"
+  }
+ },
+ {
+  "tool": "doc_replace_text",
+  "args": {
+   "ranges": [
+    {
+     "begin": 201,
+     "end": 209
+    }
+   ],
+   "text": "本文档适用于基于 STM32F103ZET6 与 STM32F10x 标准外设库 V3.6 的串口数据控制测试工程，覆盖基础要求（串口下发命令控制板载外设）以及两项进阶要求（串口下发文本实时显示到 OLED、内容写入内部 Flash 掉电保存并在下次上电自动恢复）。",
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx"
+  }
+ },
+ {
+  "tool": "doc_replace_text",
+  "args": {
+   "ranges": [
+    {
+     "begin": 213,
+     "end": 225
+    }
+   ],
+   "text": "本工程为嵌入式培训课程串口章节的实践任务。上位机通过串口助手按自定义协议下发数据帧，下位机解析后控制左转向灯、右转向灯、蜂鸣器与 LED 灯，并把需要掉电保存的内容写入片内 Flash。",
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx"
+  }
+ },
+ {
+  "tool": "doc_insert_table_row",
+  "args": {
+   "table_id": "3ba08o7y",
+   "row": 4,
+   "insert_below": true,
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx"
+  }
+ },
+ {
+  "tool": "doc_insert_table_row",
+  "args": {
+   "table_id": "3ba08o7y",
+   "row": 4,
+   "insert_below": true,
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx"
+  }
+ },
+ {
+  "tool": "doc_insert_table_row",
+  "args": {
+   "table_id": "3ba08o7y",
+   "row": 4,
+   "insert_below": true,
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx"
+  }
+ },
+ {
+  "tool": "doc_set_table_cells",
+  "args": {
+   "table_id": "1bj4fq0a",
+   "cells": [
+    {
+     "row": 2,
+     "col": 1,
+     "text": "2026.09.15"
+    },
+    {
+     "row": 2,
+     "col": 2,
+     "text": "V1.0"
+    },
+    {
+     "row": 2,
+     "col": 3,
+     "text": "首次发布"
+    }
+   ],
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx"
+  }
+ },
+ {
+  "tool": "doc_set_table_cells",
+  "args": {
+   "table_id": "3ba08o7y",
+   "cells": [
+    {
+     "row": 2,
+     "col": 1,
+     "text": "USART"
+    },
+    {
+     "row": 2,
+     "col": 2,
+     "text": "Universal Synchronous/Asynchronous Receiver/Transmitter"
+    },
+    {
+     "row": 2,
+     "col": 3,
+     "text": "通用同步/异步收发器，即常说的串口"
+    },
+    {
+     "row": 3,
+     "col": 1,
+     "text": "SPL"
+    },
+    {
+     "row": 3,
+     "col": 2,
+     "text": "Standard Peripheral Library"
+    },
+    {
+     "row": 3,
+     "col": 3,
+     "text": "ST 官方标准外设库，本工程使用 V3.6 版本"
+    },
+    {
+     "row": 4,
+     "col": 1,
+     "text": "OLED"
+    },
+    {
+     "row": 4,
+     "col": 2,
+     "text": "Organic Light-Emitting Diode"
+    },
+    {
+     "row": 4,
+     "col": 3,
+     "text": "有机发光二极管显示屏"
+    },
+    {
+     "row": 5,
+     "col": 1,
+     "text": "I2C"
+    },
+    {
+     "row": 5,
+     "col": 2,
+     "text": "Inter-Integrated Circuit"
+    },
+    {
+     "row": 5,
+     "col": 3,
+     "text": "两线式串行总线"
+    },
+    {
+     "row": 6,
+     "col": 1,
+     "text": "SSD1306"
+    },
+    {
+     "row": 6,
+     "col": 2,
+     "text": "—"
+    },
+    {
+     "row": 6,
+     "col": 3,
+     "text": "OLED 显示驱动控制器芯片"
+    },
+    {
+     "row": 7,
+     "col": 1,
+     "text": "Flash"
+    },
+    {
+     "row": 7,
+     "col": 2,
+     "text": "Flash Memory"
+    },
+    {
+     "row": 7,
+     "col": 3,
+     "text": "闪存，本文指 STM32 片内 Flash"
+    }
+   ],
+   "file_id": "D:/STM32_Project/docs/串口数据控制测试_接口文档.docx"
+  }
+ }
+]
