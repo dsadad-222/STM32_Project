@@ -1,0 +1,79 @@
+=== 连接 STM32F103ZE State.HALTED ===
+  GPIOF_CRL=04444444 GPIOF_CRH=44443004
+  ADC3 CR2=00000001 SMPR2=07FF8000
+
+每格是 ADC3 原始值（12 位，满量程 4096；值越小说明接收管被拉得越低 = 反射越强）
+
+灯态               PF9 左接收        PF10 右接收       PF7(BAT) 参照   
+--------------------------------------------------------------
+两灯都灭             66             66             66            
+只亮左灯 L4          66             66             66            
+Traceback (most recent call last):
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\pyocd\probe\stlink\usb.py", line 259, in transfer
+    data = self._read(readSize)
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\pyocd\probe\stlink\usb.py", line 230, in _read
+    data = self._ep_in.read(read_size, timeout)
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\usb\core.py", line 431, in read
+    return self.device.read(self, size_or_buffer, timeout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\usb\core.py", line 1043, in read
+    ret = fn(
+            self._ctx.handle,
+    ...<2 lines>...
+            buff,
+            self.__get_timeout(timeout))
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\usb\backend\libusb1.py", line 850, in bulk_read
+    return self.__read(self.lib.libusb_bulk_transfer,
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       dev_handle,
+                       ^^^^^^^^^^^
+    ...<2 lines>...
+                       buff,
+                       ^^^^^
+                       timeout)
+                       ^^^^^^^^
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\usb\backend\libusb1.py", line 958, in __read
+    _check(retval)
+    ~~~~~~^^^^^^^^
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\usb\backend\libusb1.py", line 604, in _check
+    raise USBError(_strerror(ret), ret, _libusb_errno[ret])
+usb.core.USBError: [Errno 32] Pipe error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\STM32_Project\_ir_cross.py", line 126, in <module>
+    v7 = avg(5)                     # BAT 当参照：灯态不该影响它
+  File "D:\STM32_Project\_ir_cross.py", line 104, in avg
+    tot += conv(ch)
+           ~~~~^^^^
+  File "D:\STM32_Project\_ir_cross.py", line 94, in conv
+    while n < 200 and not (t.read32(ADC3 + ADC_SR) & 0x02):
+                           ~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\pyocd\core\memory_interface.py", line 116, in read32
+    return self.read_memory(addr, 32, now)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\pyocd\core\soc_target.py", line 232, in read_memory
+    return self.selected_core_or_raise.read_memory(addr, transfer_size, now)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\pyocd\coresight\cortex_m.py", line 620, in read_memory
+    result = self.ap.read_memory(addr, transfer_size, now)
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\pyocd\utility\concurrency.py", line 29, in _locking
+    return func(self, *args, **kwargs)
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\pyocd\coresight\ap.py", line 1319, in _accelerated_read_memory
+    return self._accelerated_memory_interface.read_memory(addr, transfer_size, now,
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+            csw=self._csw) # type: ignore
+            ^^^^^^^^^^^^^^
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\pyocd\probe\stlink_probe.py", line 308, in read_memory
+    result = conversion.byte_list_to_u32le_list(self._link.read_mem32(addr, 4, self._apsel, csw))[0]
+                                                ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\pyocd\probe\stlink\stlink.py", line 489, in read_mem32
+    return self._read_mem(addr, size, Commands.JTAG_READMEM_32BIT, self.MAXIMUM_TRANSFER_SIZE, apsel, csw)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\pyocd\probe\stlink\stlink.py", line 420, in _read_mem
+    result += self._device.transfer(cmd, readSize=thisTransferSize)
+              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\STM32_AI_Tools\venvs\emb\Lib\site-packages\pyocd\probe\stlink\usb.py", line 270, in transfer
+    raise exceptions.ProbeError("USB Error: %s" % exc) from exc
+pyocd.core.exceptions.ProbeError: USB Error: [Errno 32] Pipe error

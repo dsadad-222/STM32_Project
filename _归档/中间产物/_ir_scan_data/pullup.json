@@ -1,0 +1,667 @@
+{
+ "tag": "pullup",
+ "rounds": 493,
+ "stat": {
+  "PA0": {
+   "zero": 493,
+   "one": 0,
+   "flip": 0,
+   "last": 0
+  },
+  "PA1": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PA2": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PA3": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PA4": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PA5": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PA6": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PA7": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PA8": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PA10": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PA11": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PA12": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PB0": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PB1": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PB2": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PB3": {
+   "zero": 493,
+   "one": 0,
+   "flip": 0,
+   "last": 0
+  },
+  "PB5": {
+   "zero": 493,
+   "one": 0,
+   "flip": 0,
+   "last": 0
+  },
+  "PB8": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PB9": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PB10": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PB11": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PB12": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PB13": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PB14": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PB15": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC0": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC1": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC2": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC3": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC4": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC5": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC6": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC7": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC8": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC9": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC10": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC11": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC12": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC13": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC14": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PC15": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD0": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD1": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD2": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD3": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD4": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD5": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD6": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD7": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD8": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD9": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD10": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD11": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD12": {
+   "zero": 493,
+   "one": 0,
+   "flip": 0,
+   "last": 0
+  },
+  "PD13": {
+   "zero": 493,
+   "one": 0,
+   "flip": 0,
+   "last": 0
+  },
+  "PD14": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PD15": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE0": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE1": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE5": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE6": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE7": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE8": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE9": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE10": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE11": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE12": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE13": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE14": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PE15": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF0": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF1": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF2": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF3": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF4": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF5": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF6": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF7": {
+   "zero": 493,
+   "one": 0,
+   "flip": 0,
+   "last": 0
+  },
+  "PF8": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF9": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF10": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF11": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF12": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF13": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF14": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PF15": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PG6": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PG7": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PG8": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PG9": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PG10": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PG11": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  },
+  "PG13": {
+   "zero": 0,
+   "one": 493,
+   "flip": 0,
+   "last": 1
+  }
+ },
+ "hits": [
+  "PA0",
+  "PB3",
+  "PB5",
+  "PD12",
+  "PD13",
+  "PF7"
+ ],
+ "touched": [
+  "PA0",
+  "PA1",
+  "PA2",
+  "PA3",
+  "PA4",
+  "PA5",
+  "PA6",
+  "PA7",
+  "PA8",
+  "PA10",
+  "PA11",
+  "PA12",
+  "PB0",
+  "PB1",
+  "PB2",
+  "PB3",
+  "PB5",
+  "PB8",
+  "PB9",
+  "PB10",
+  "PB11",
+  "PB12",
+  "PB13",
+  "PB14",
+  "PB15",
+  "PC0",
+  "PC1",
+  "PC2",
+  "PC3",
+  "PC4",
+  "PC5",
+  "PC6",
+  "PC7",
+  "PC8",
+  "PC9",
+  "PC10",
+  "PC11",
+  "PC12",
+  "PC13",
+  "PC14",
+  "PC15",
+  "PD0",
+  "PD1",
+  "PD2",
+  "PD3",
+  "PD4",
+  "PD5",
+  "PD6",
+  "PD7",
+  "PD8",
+  "PD9",
+  "PD10",
+  "PD11",
+  "PD12",
+  "PD13",
+  "PD14",
+  "PD15",
+  "PE0",
+  "PE1",
+  "PE5",
+  "PE6",
+  "PE7",
+  "PE8",
+  "PE9",
+  "PE10",
+  "PE11",
+  "PE12",
+  "PE13",
+  "PE14",
+  "PE15",
+  "PF0",
+  "PF1",
+  "PF2",
+  "PF3",
+  "PF4",
+  "PF5",
+  "PF6",
+  "PF7",
+  "PF8",
+  "PF9",
+  "PF10",
+  "PF11",
+  "PF12",
+  "PF13",
+  "PF14",
+  "PF15",
+  "PG6",
+  "PG7",
+  "PG8",
+  "PG9",
+  "PG10",
+  "PG11",
+  "PG13"
+ ]
+}

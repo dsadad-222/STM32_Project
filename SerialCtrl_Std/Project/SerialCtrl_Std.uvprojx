@@ -548,7 +548,17 @@
               <FileName>led_drv.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drv_Common\led_drv.c</FilePath>
-            </File><File><FileName>key_drv.c</FileName><FileType>1</FileType><FilePath>..\Drv_Common\key_drv.c</FilePath></File><File><FileName>pwm_drv.c</FileName><FileType>1</FileType><FilePath>..\Drv_Common\pwm_drv.c</FilePath></File>
+            </File>
+            <File>
+              <FileName>key_drv.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drv_Common\key_drv.c</FilePath>
+            </File>
+            <File>
+              <FileName>pwm_drv.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drv_Common\pwm_drv.c</FilePath>
+            </File>
             <File>
               <FileName>beep_drv.c</FileName>
               <FileType>1</FileType>
@@ -564,13 +574,6 @@
               <FileType>1</FileType>
               <FilePath>..\Drv_Common\systick_drv.c</FilePath>
             </File>
-            
-            
-            
-            
-            
-            
-            
           </Files>
         </Group>
       </Groups>

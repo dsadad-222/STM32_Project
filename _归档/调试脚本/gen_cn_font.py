@@ -15,13 +15,19 @@ from ctypes import wintypes
 gdi32 = ctypes.WinDLL("gdi32", use_last_error=True)
 
 # 默认输出到 chapter8 原工程（不带参数运行时行为完全不变）。
-# 用法：python gen_cn_font.py [输出工程根目录] [--radar]
-#   --radar 追加"倒车雷达"用到的汉字与新消息宏，不污染原工程字库。
+# 用法：python gen_cn_font.py [输出工程根目录] [--radar] [--chars=中文字串]
+#   --radar       追加"倒车雷达"用到的汉字与新消息宏，不污染原工程字库。
+#   --chars=XXX   **整体替换**字集，只生成 XXX 里的字（最小字库）。
+#                 用于"屏上只显示固定几个字"的小工程，字模体积 = 字数 x 34 字节。
 OUT_DIR = r"D:\STM32_Project\AdcTemp_Full"
 PREVIEW_PNG = r"C:\Users\y7000\Desktop\嵌入式\中文字库16x16_预览.png"
 
 ARGS = [a for a in sys.argv[1:] if not a.startswith("--")]
 RADAR_MODE = ("--radar" in sys.argv)
+CHARS_ONLY = None
+for a in sys.argv[1:]:
+    if a.startswith("--chars="):
+        CHARS_ONLY = a.split("=", 1)[1]
 if ARGS:
     OUT_DIR = ARGS[0]
     PREVIEW_PNG = OUT_DIR + r"\Doc\中文字库16x16_预览.png"
@@ -121,6 +127,9 @@ CHARS_RADAR = (
 
 if RADAR_MODE:
     CHARS += CHARS_RADAR
+
+if CHARS_ONLY is not None:
+    CHARS = CHARS_ONLY                      # --chars= 模式：整体替换，只留这几个字
 
 CHARS = "".join(dict.fromkeys(CHARS))       # 去重，保持顺序
 

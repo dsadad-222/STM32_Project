@@ -1,0 +1,44 @@
+=== 连接 STM32F103ZE State.HALTED ===
+
+### A. ADC3 通道映射与 PF9 排查 ###
+  GPIOF_CRL=00444444 GPIOF_CRH=44443004
+  校准：RSTCAL 等 0 次、CAL 等 0 次（都应为 0~1，大就是时钟没起）
+  ADC3 CR2=00000001 SMPR1=07FFF000 SMPR2=07FFF000（ch4~8 应为 7）
+
+  通道映射标尺（PF6/IN4、PF7/IN5、PF8/IN6、PF9/IN7、PF10/IN8）：
+    ch4  PF6(CCD-AO)  =   66   (期望 ~3000)
+    ch5  PF7(BAT)     =   66   (期望 ~650)
+    ch6  PF8(LIGHT)   =   66   (期望 ~2200)
+    ch7  PF9(左接收)     =   66   (期望 ~4080)
+    ch8  PF10(右接收)    =   66   (期望 ~4040)
+  EOC 轮询累计空转 9800 次（越接近 0 越好）
+
+  同一批引脚改用【浮空输入】读数字电平（0x4），与 ADC 结果对照：
+    PF6    IDR 高占比=100%   ADC=  66 (≈  53 mV)  ★ 不一致
+    PF7    IDR 高占比=  0%   ADC=  66 (≈  53 mV)  一致
+    PF8    IDR 高占比=100%   ADC=  66 (≈  53 mV)  ★ 不一致
+    PF9    IDR 高占比=  0%   ADC=  66 (≈  53 mV)  一致
+    PF10   IDR 高占比=  0%   ADC=  66 (≈  53 mV)  一致
+
+### B. 模拟按键（PG3/PG4/PG5 拉低 250ms），验证 App 真实行为 ###
+  [复位后基线] mode=0 msg="W25Q64 OK       "
+        L: dark=   0 lit=   0 diff=   0 level=FAR  strength=  0 valid=0
+        R: dark=   0 lit=   0 diff=   0 level=FAR  strength=  0 valid=0
+
+  >>> 模拟按 KEY1=测左侧
+  [KEY1=测左侧] mode=2 msg="IR LEFT DONE    "
+        L: dark=4091 lit=4092 diff=   0 level=FAR  strength=  0 valid=1
+        R: dark=   0 lit=   0 diff=   0 level=FAR  strength=  0 valid=0
+
+  >>> 模拟按 KEY2=测右侧
+  [KEY2=测右侧] mode=2 msg="IR RIGHT DONE   "
+        L: dark=4091 lit=4092 diff=   0 level=FAR  strength=  0 valid=1
+        R: dark=4034 lit=3803 diff= 231 level=MID  strength=  9 valid=1
+
+  >>> 模拟按 KEY3=左右都测
+  [KEY3=左右都测] mode=2 msg="IR BOTH DONE    "
+        L: dark=4093 lit=4093 diff=   0 level=FAR  strength=  0 valid=1
+        R: dark=4035 lit=3809 diff= 226 level=MID  strength=  9 valid=1
+
+### 收尾 ###
+  已复位重启 App，探针已释放

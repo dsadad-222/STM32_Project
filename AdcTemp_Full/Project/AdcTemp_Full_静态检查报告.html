@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>静态检查 · AdcTemp_Full</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#1f2328;--muted:#6b7280;--line:#e5e7eb}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a21;
+--fg:#e6e8eb;--muted:#9aa4b2;--line:#2a2f3a}}
+*{box-sizing:border-box}
+body{margin:0;padding:28px;background:var(--bg);color:var(--fg);
+font:14px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
+.wrap{max-width:1060px;margin:0 auto}
+h1{font-size:21px;font-weight:600;margin:0 0 6px}
+h2{font-size:15px;font-weight:600;margin:28px 0 10px;padding-bottom:7px;
+border-bottom:1px solid var(--line)}
+.sub{color:var(--muted);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:12px;margin:18px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.card .k{color:var(--muted);font-size:12px}
+.card .v{font-size:22px;font-weight:600;margin-top:2px}
+table{width:100%;border-collapse:collapse;background:var(--card);
+border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13px}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);
+vertical-align:top}
+th{background:var(--bg);color:var(--muted);font-weight:500;font-size:12px}
+tr:last-child td{border-bottom:none}
+td.n{text-align:right;font-family:ui-monospace,Consolas,monospace;color:var(--muted)}
+code{background:var(--bg);border:1px solid var(--line);border-radius:4px;
+padding:1px 5px;font-size:12px;word-break:break-all}
+.pill{display:inline-block;padding:1px 8px;border-radius:20px;font-size:11px;
+border:1px solid currentColor;white-space:nowrap}
+.ok{background:var(--card);border:1px solid var(--line);border-left:3px solid #16a34a;
+border-radius:8px;padding:16px;color:var(--fg)}
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid #2563eb;
+border-radius:8px;padding:14px 16px;color:var(--muted);font-size:13px;margin-top:16px}
+.foot{color:var(--muted);font-size:12px;margin-top:34px;text-align:center}
+</style></head><body><div class="wrap">
+<h1>AdcTemp_Full · 静态代码检查</h1>
+<div class='sub'>工程：<code>D:\STM32_Project\AdcTemp_Full\Project\AdcTemp_Full.uvprojx</code></div>
+<div class='sub'>检查强度：normal ｜ 源文件 38 个 ｜ include 路径 4 个 ｜ 宏 2 个</div>
+<div class='sub'>生成时间：2026-09-17 08:52:05</div>
+<div class='cards'>
+<div class='card'><div class='k'>警告</div><div class='v' style='color:#d97706'>2</div></div>
+<div class='card'><div class='k'>风格</div><div class='v' style='color:#6b7280'>106</div></div>
+</div>
+<h2>警告（2 处）</h2>
+<table><thead><tr><th style='width:56px'>行号</th><th>文件</th><th>问题</th><th style='width:150px'>检查项</th></tr></thead><tbody>
+<tr><td class='n'>329</td><td><code>main.c</code></td><td>Either the condition &#x27;i&lt;(128/8)&#x27; is redundant or the array &#x27;text[9]&#x27; is accessed at index 15, which is out of bounds.</td><td><span class='pill' style='color:#d97706'>arrayIndexOutOfBoundsCond</span></td></tr>
+<tr><td class='n'>331</td><td><code>main.c</code></td><td>Either the condition &#x27;i&lt;(128/8)&#x27; is redundant or the array &#x27;text[9]&#x27; is accessed at index 15, which is out of bounds.</td><td><span class='pill' style='color:#d97706'>arrayIndexOutOfBoundsCond</span></td></tr>
+</tbody></table>
+<h2>风格（106 处）</h2>
+<table><thead><tr><th style='width:56px'>行号</th><th>文件</th><th>问题</th><th style='width:150px'>检查项</th></tr></thead><tbody>
+<tr><td class='n'>412</td><td><code>main.c</code></td><td>The scope of the variable &#x27;i&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>413</td><td><code>main.c</code></td><td>The scope of the variable &#x27;cnLen&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>414</td><td><code>main.c</code></td><td>The scope of the variable &#x27;startCol&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>1342</td><td><code>main.c</code></td><td>The scope of the variable &#x27;now&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>1344</td><td><code>main.c</code></td><td>The scope of the variable &#x27;num&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>113</td><td><code>misc.c</code></td><td>The scope of the variable &#x27;tmppriority&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>113</td><td><code>misc.c</code></td><td>The scope of the variable &#x27;tmppre&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>111</td><td><code>misc.c</code></td><td>Parameter &#x27;NVIC_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>113</td><td><code>misc.c</code></td><td>Variable &#x27;tmppriority&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>113</td><td><code>misc.c</code></td><td>Variable &#x27;tmppre&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>178</td><td><code>stm32f10x_adc.c</code></td><td>Parameter &#x27;ADCx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>217</td><td><code>stm32f10x_adc.c</code></td><td>Parameter &#x27;ADC_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>391</td><td><code>stm32f10x_adc.c</code></td><td>Parameter &#x27;ADCx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>429</td><td><code>stm32f10x_adc.c</code></td><td>Parameter &#x27;ADCx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>480</td><td><code>stm32f10x_adc.c</code></td><td>Parameter &#x27;ADCx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>707</td><td><code>stm32f10x_adc.c</code></td><td>Parameter &#x27;ADCx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>872</td><td><code>stm32f10x_adc.c</code></td><td>Parameter &#x27;ADCx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>1194</td><td><code>stm32f10x_adc.c</code></td><td>Parameter &#x27;ADCx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>1246</td><td><code>stm32f10x_adc.c</code></td><td>Parameter &#x27;ADCx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>1144</td><td><code>stm32f10x_can.c</code></td><td>The scope of the variable &#x27;flagtmp&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>121</td><td><code>stm32f10x_can.c</code></td><td>Parameter &#x27;CANx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>153</td><td><code>stm32f10x_can.c</code></td><td>Parameter &#x27;CAN_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>291</td><td><code>stm32f10x_can.c</code></td><td>Parameter &#x27;CAN_FilterInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>588</td><td><code>stm32f10x_can.c</code></td><td>Parameter &#x27;CANx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>742</td><td><code>stm32f10x_can.c</code></td><td>Parameter &#x27;CANx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>921</td><td><code>stm32f10x_can.c</code></td><td>Parameter &#x27;CANx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>945</td><td><code>stm32f10x_can.c</code></td><td>Parameter &#x27;CANx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>965</td><td><code>stm32f10x_can.c</code></td><td>Parameter &#x27;CANx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>1042</td><td><code>stm32f10x_can.c</code></td><td>Parameter &#x27;CANx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>1202</td><td><code>stm32f10x_can.c</code></td><td>Parameter &#x27;CANx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>1144</td><td><code>stm32f10x_can.c</code></td><td>Variable &#x27;flagtmp&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>134</td><td><code>stm32f10x_cec.c</code></td><td>Parameter &#x27;CEC_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>106</td><td><code>stm32f10x_crc.c</code></td><td>Parameter &#x27;pBuffer&#x27; can be declared as const array</td><td><span class='pill' style='color:#6b7280'>constParameter</span></td></tr>
+<tr><td class='n'>116</td><td><code>stm32f10x_dac.c</code></td><td>Parameter &#x27;DAC_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>201</td><td><code>stm32f10x_dma.c</code></td><td>Parameter &#x27;DMA_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>370</td><td><code>stm32f10x_dma.c</code></td><td>Parameter &#x27;DMAy_Channelx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>100</td><td><code>stm32f10x_exti.c</code></td><td>Parameter &#x27;EXTI_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>449</td><td><code>stm32f10x_gpio.c</code></td><td>Variable &#x27;tmp&#x27; is reassigned a value before the old one has been used.</td><td><span class='pill' style='color:#6b7280'>redundantAssignment</span></td></tr>
+<tr><td class='n'>550</td><td><code>stm32f10x_gpio.c</code></td><td>The scope of the variable &#x27;tmp1&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>107</td><td><code>stm32f10x_gpio.c</code></td><td>Parameter &#x27;GPIOx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>172</td><td><code>stm32f10x_gpio.c</code></td><td>Parameter &#x27;GPIO_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>280</td><td><code>stm32f10x_gpio.c</code></td><td>Parameter &#x27;GPIOx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>304</td><td><code>stm32f10x_gpio.c</code></td><td>Parameter &#x27;GPIOx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>319</td><td><code>stm32f10x_gpio.c</code></td><td>Parameter &#x27;GPIOx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>342</td><td><code>stm32f10x_gpio.c</code></td><td>Parameter &#x27;GPIOx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>174</td><td><code>stm32f10x_gpio.c</code></td><td>Variable &#x27;currentpin&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>174</td><td><code>stm32f10x_gpio.c</code></td><td>Variable &#x27;pinpos&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>174</td><td><code>stm32f10x_gpio.c</code></td><td>Variable &#x27;pos&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>175</td><td><code>stm32f10x_gpio.c</code></td><td>Variable &#x27;tmpreg&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>175</td><td><code>stm32f10x_gpio.c</code></td><td>Variable &#x27;pinmask&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>449</td><td><code>stm32f10x_gpio.c</code></td><td>Variable &#x27;tmp&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>550</td><td><code>stm32f10x_gpio.c</code></td><td>Variable &#x27;tmp1&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>161</td><td><code>stm32f10x_i2c.c</code></td><td>Parameter &#x27;I2Cx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>190</td><td><code>stm32f10x_i2c.c</code></td><td>Parameter &#x27;I2C_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>582</td><td><code>stm32f10x_i2c.c</code></td><td>Parameter &#x27;I2Cx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>824</td><td><code>stm32f10x_i2c.c</code></td><td>Parameter &#x27;I2Cx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>1029</td><td><code>stm32f10x_i2c.c</code></td><td>Parameter &#x27;I2Cx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>1077</td><td><code>stm32f10x_i2c.c</code></td><td>Parameter &#x27;I2Cx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>1245</td><td><code>stm32f10x_i2c.c</code></td><td>Parameter &#x27;I2Cx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>180</td><td><code>stm32f10x_sdio.c</code></td><td>Parameter &#x27;SDIO_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>344</td><td><code>stm32f10x_sdio.c</code></td><td>Parameter &#x27;SDIO_CmdInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>429</td><td><code>stm32f10x_sdio.c</code></td><td>Parameter &#x27;SDIO_DataInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>323</td><td><code>stm32f10x_spi.c</code></td><td>Variable &#x27;tmp&#x27; is reassigned a value before the old one has been used.</td><td><span class='pill' style='color:#6b7280'>redundantAssignment</span></td></tr>
+<tr><td class='n'>118</td><td><code>stm32f10x_spi.c</code></td><td>Parameter &#x27;SPIx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>157</td><td><code>stm32f10x_spi.c</code></td><td>Parameter &#x27;SPI_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>218</td><td><code>stm32f10x_spi.c</code></td><td>Parameter &#x27;I2S_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>562</td><td><code>stm32f10x_spi.c</code></td><td>Parameter &#x27;SPIx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>688</td><td><code>stm32f10x_spi.c</code></td><td>Parameter &#x27;SPIx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>713</td><td><code>stm32f10x_spi.c</code></td><td>Parameter &#x27;SPIx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>765</td><td><code>stm32f10x_spi.c</code></td><td>Parameter &#x27;SPIx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>828</td><td><code>stm32f10x_spi.c</code></td><td>Parameter &#x27;SPIx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>220</td><td><code>stm32f10x_spi.c</code></td><td>Variable &#x27;packetlength&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>221</td><td><code>stm32f10x_spi.c</code></td><td>Variable &#x27;tmp&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>223</td><td><code>stm32f10x_spi.c</code></td><td>Variable &#x27;sourceclock&#x27; is assigned a value that is never used.</td><td><span class='pill' style='color:#6b7280'>unreadVariable</span></td></tr>
+<tr><td class='n'>121</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIMx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>225</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIM_TimeBaseInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>278</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIM_OCInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>361</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIM_OCInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>443</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIM_OCInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>522</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIM_OCInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>586</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIM_ICInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>653</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIM_ICInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>711</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIM_BDTRInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>2456</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIMx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>2469</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIMx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>2482</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIMx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>2495</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIMx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>2508</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIMx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>2521</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIMx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>2555</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIMx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>2631</td><td><code>stm32f10x_tim.c</code></td><td>Parameter &#x27;TIMx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>129</td><td><code>stm32f10x_usart.c</code></td><td>Parameter &#x27;USARTx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>175</td><td><code>stm32f10x_usart.c</code></td><td>Parameter &#x27;USART_InitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>301</td><td><code>stm32f10x_usart.c</code></td><td>Parameter &#x27;USART_ClockInitStruct&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>608</td><td><code>stm32f10x_usart.c</code></td><td>Parameter &#x27;USARTx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>873</td><td><code>stm32f10x_usart.c</code></td><td>Parameter &#x27;USARTx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>956</td><td><code>stm32f10x_usart.c</code></td><td>Parameter &#x27;USARTx&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>270</td><td><code>oled_drv.c</code></td><td>The scope of the variable &#x27;pageByte&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>333</td><td><code>oled_drv.c</code></td><td>The scope of the variable &#x27;pageByte&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>408</td><td><code>oled_drv.c</code></td><td>The scope of the variable &#x27;lo&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>409</td><td><code>oled_drv.c</code></td><td>The scope of the variable &#x27;hi&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>72</td><td><code>flash_drv.c</code></td><td>The scope of the variable &#x27;halfWord&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>85</td><td><code>adc_drv.c</code></td><td>The scope of the variable &#x27;v&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>40</td><td><code>key_drv.c</code></td><td>Parameter &#x27;key&#x27; can be declared as pointer to const</td><td><span class='pill' style='color:#6b7280'>constParameterPointer</span></td></tr>
+<tr><td class='n'>170</td><td><code>pwm_drv.c</code></td><td>The scope of the variable &#x27;on&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+<tr><td class='n'>171</td><td><code>pwm_drv.c</code></td><td>The scope of the variable &#x27;mask&#x27; can be reduced.</td><td><span class='pill' style='color:#6b7280'>variableScope</span></td></tr>
+</tbody></table>
+<div class='note'><b>怎么读</b><br>· <b>错误</b>（error）基本要改，是真问题。<br>· <b>警告</b>（warning）要逐个看，cppcheck 有时会误报（例如它把字符串字面量的长度当成数组边界）。<br>· <b>性能</b> / <b>可移植性</b> 在单片机上多数可以忽略。<br>· <b>风格</b> 是习惯问题，不影响功能，按需改。<br>· 检查强度 <code>normal</code> 会为了速度限制分支分析，想更彻底可以换 <code>exhaustive</code>（慢很多）。</div>
+<div class='foot'>由 check_code.py 生成 · cppcheck 2.18.0</div>
+</div></body></html>
